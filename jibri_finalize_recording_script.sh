@@ -42,7 +42,7 @@ echo "$emails" > /tmp/jibri_email.out
 
 while IFS= read -r email; do
 
-message="To: $email\nSubject: Download Recording Link: $jibri_url_path\n\n."
+message="To: $email\nSubject:You have a new conference recording!\nHi There!\nHere it is your download recording link: $jibri_url_path\n\n."
 echo -e "$message" > /tmp/jibri_send_email.out
 echo -e "$message" | msmtp -d  $email >> /tmp/jibri_send_email.log
 
